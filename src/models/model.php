@@ -33,7 +33,7 @@ class Model{
     private static function getFilters($filters){
         $sql = '';
         if (count($filters) > 0){
-            
+            $sql.= 'WHERE'
         }
         return $sql;
     }
