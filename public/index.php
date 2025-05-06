@@ -4,7 +4,8 @@ require_once(dirname(__FILE__, 2) . '/src/config/config.php');
 require_once(dirname(__FILE__, 2) . '/src/models/user.php');
 
 $user = new User(['name' => 'João Lindão', 'email' => 'ola@email.com']);
-echo $user->getSelect('id, name')
+
+User::getSelect(['id' => 1], 'name, email');
 
 
 // $user->set('email' , 'jvrocha@ola.com');
