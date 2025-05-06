@@ -25,8 +25,10 @@ class Model{
         $this->values[$key] = $value;
     }
 
-    public function getSelect($columns = '*'){
-        $sql = "SELECT $columns FROM " . static::$tableName;
+    public static function getSelect($filters = [] , $columns = '*'){
+        $sql = "SELECT $columns FROM " . static::$tableName .;
         return $sql;
     }
+
+    public static function 
 }
