@@ -26,9 +26,15 @@ class Model{
     }
 
     public static function getSelect($filters = [] , $columns = '*'){
-        $sql = "SELECT $columns FROM " . static::$tableName .;
+        $sql = "SELECT $columns FROM " . static::$tableName . static::getFilters($filters);
         return $sql;
     }
 
-    public static function 
+    private static function getFilters($filters){
+        $sql = '';
+        if (count($filters) > 0){
+            
+        }
+        return $sql;
+    }
 }
