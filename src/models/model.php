@@ -12,16 +12,16 @@ class Model{
     public function loadFromArr($arr){
         if ($arr){
             foreach($arr as $key => $value){
-                $this -> $key = $value;
+                $this -> set($key , $value);
             }
         }
     }
 
-    public function __get($key){
+    public function get($key){
         return $this -> $values[$key];
     }
 
-    public function __set($key, $value){
+    public function set($key, $value){
         $this -> $values[$key] = $value;
     }
 
