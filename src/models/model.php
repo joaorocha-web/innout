@@ -18,11 +18,15 @@ class Model{
     }
 
     public function __get($key){
-        return $this -> $values[$key]; 
+        return $this -> values[$key]; 
     }
 
     public function __set($key, $value){
-        $this -> $values[$key] = $value;
+        $this -> values[$key] = $value;
     }
 
+    public function getSelect(){
+        $sql = 'SELECT * FROM ' . static::$tableName;
+        return $sql;
+    }
 }
