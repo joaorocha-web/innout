@@ -1,17 +1,7 @@
 <?php
 
 require_once(dirname(__FILE__, 2) . '/src/config/config.php');
-require_once(dirname(__FILE__, 2) . '/src/models/user.php');
-
-$user = new User(['name' => 'João Lindão', 'email' => 'ola@email.com']);
-
-print_r( User::get(['id' => 3], 'name, email')) ;
-echo '<br>';
-
-
-
-// $user->set('email' , 'jvrocha@ola.com');
-// print_r($user->get('email'));
+require_once(dirname(__FILE__, 2) . '/src/views/login.php');
 
 
 
