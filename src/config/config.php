@@ -5,6 +5,7 @@ setlocale(LC_TIME, 'pt-BR', 'pt-BR.utf-8', 'portuguese');
 //PASTAS
 define('MODEL_PATH', realpath(dirname(__FILE__) . '/../models'));
 define('VIEW_PATH', realpath(dirname(__FILE__) . '/../views'));
+define('CONTROLLER_PATH', realpath(dirname(__FILE__) . '/../controllers'));
 
 //ARQUIVOS
 require_once(realpath(dirname(__FILE__) . '/database.php'));
