@@ -10,7 +10,8 @@ if ($exception){
 ?>
 
 <?php if($message) : ?>
-<div class="my-3 alert alert-danger" role="alert">
+<div role="alert" 
+    class="my-3 alert alert-<?php $message['type'] === 'error' ? 'danger' : 'success'?>" >
     <?= $message['message'] ?>
 </div>
 <?php endif ?>
