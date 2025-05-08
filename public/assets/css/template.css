@@ -71,6 +71,7 @@ header.header .dropdown-content{
     padding: 10px 0px;
     z-index: 100;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, .2);
+    border-radius: 0px 0px 0px 10px;
 }
 
 header.header .dropdown:hover .dropdown-content{
@@ -79,12 +80,17 @@ header.header .dropdown:hover .dropdown-content{
 
 header.header .dropdown-content ul{
     list-style: none;
-    padding-left: 2px;
+    padding-left: 0px;
+    margin-bottom: 0px;
 }
 
 header.header .dropdown-content a{
+    display: flex;
+    align-items: center;
     text-decoration: none;
     color: #222;
+    padding: 6px;
+    font-size: 1.1rem;
 }
 
 header.header .dropdown-content a:hover{
