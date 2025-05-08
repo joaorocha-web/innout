@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="assets/css/template.css?v=9999">
     <title>In 'n Out</title>
 </head>
-<body>
+<body >
     <header class="header">
         <div class="logo">
         <i class="icofont-travelling mr-2"></i>

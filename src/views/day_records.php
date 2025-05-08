@@ -1,1 +1,6 @@
-<h1>ok</h1>
+<main class="content">
+    <h1>Okay</h1>
+    <h1>Okay</h1>
+    <h1>Okay</h1>
+   
+</main>
