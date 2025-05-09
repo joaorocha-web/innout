@@ -5,7 +5,7 @@ loadModel('User');
 class Login extends Model {
     public function validate(){
         $errors = [];
-        if (!$this->email){
+        if (!$this->email){ ### Onde está esssa variável
             $errors['email'] = 'Por favor, informe seu e-mail.';
         }
 
@@ -14,7 +14,7 @@ class Login extends Model {
         }
 
         if(count($errors) > 0){
-            throw new ValidationException($errors);
+            throw new ValidationException($errors); ###### Como consigo usar isso?
         }
     }
 
@@ -25,7 +25,7 @@ class Login extends Model {
             if($user->end_date){
                 throw new AppException('Usuário desligado da empresa');   
             }
-            if(password_verify($this->password, $user->password)){
+            if(password_verify($this->password, $user->password)){ ### essa função ja existe?
                 return $user;
             }
         }
