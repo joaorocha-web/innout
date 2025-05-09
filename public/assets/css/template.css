@@ -4,7 +4,7 @@ body{
     display: grid;
     grid-template-columns: 250px 1fr;
     grid-template-rows: 64px 1fr 60px;
-    grid-template-areas: "header header" "menu content" "footer footer";
+    grid-template-areas: "header header" "menu content" "menu footer";
     background-color: #ddd;
 }
 
@@ -99,6 +99,42 @@ header.header .dropdown-content a:hover{
 
 aside.sidebar{
     grid-area: menu;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: -5px 0px 25px 1px rgba(0, 0, 0, .4);
+    background-color: #fff;
+}
+
+aside.sidebar .menu{
+    width: 100%;
+    flex-grow: 1;
+}
+
+aside.sidebar .menu ul.nav-list{
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+aside.sidebar .menu li.nav-item{
+    margin: 0;
+    padding: 10px 0px 10px 25px;
+
+}
+
+aside.sidebar .menu li.nav-item:hover{
+    background-color: rgba(0, 0, 0, .1);
+}
+
+aside.sidebar .menu li.nav-item a{
+    text-decoration: none;
+    color: #1976d2;
+    font-size: 1.2rem;
+}
+
+aside.sidebar .menu li.nav-item a:hover{
+    color: #333;
 }
 
 body.hide-menu aside.sidebar{
