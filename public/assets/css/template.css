@@ -174,6 +174,37 @@ aside.sidebar .info .main{
 
 main.content{
     grid-area: content;
+    background-color: #fff;
+    margin: 20px;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0px 0px 25px 0px rgba(0, 0, 0, .2);
+}
+
+main.content .content-title{
+    display: flex;
+    align-items: center;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #ccc;
+}
+
+main.content .content-title .icon{
+    font-size: 2.6rem;
+
+}
+
+main.content .content-title h1{
+    font-size: 1.8rem;
+    color: #444;
+    font-weight: 300;
+    margin: 0;
+}
+
+main.content .content-title h2{
+    font-size: 1.2rem;
+    color:#888;
+    font-weight: 300;
+    margin: 0;
 }
 
 footer.footer{
