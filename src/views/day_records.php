@@ -1,5 +1,31 @@
 <main class="content">
-    <h1>Okay</h1>
-    <h1>Okay</h1>
+   <div class="content-title mb-4">
+        <i class="icon icofont-check-alt mr-2"></i>
+        <div>
+            <h1>Registrar Ponto</h1>
+            <h2>Mantenha seu ponto consistente!</h2>
+        </div>
+   </div>
+   <div class="card">
+    <div class="card-header">
+        <h3>10 de janeiro de 2025</h3>
+        <p class="mb-0">Os batimentos efetuados hoje</p>
+    </div>
+    <div class="card-body">
+        <div class="d-flex m-5 justify-content-around">
+            <span>Entrada 1:---</span>
+            <span>Saída1:---</span>
+        </div>
+        <div class="d-flex m-5 justify-content-around">
+            <span>Entrada2:---</span>
+            <span>Saída2:---</span>
+        </div>
+    </div>
+    <div class="card-footer d-flex justify-content-center">
+        <a href="#" class="btn btn-success btn-md">
+            <i class="icofont-check mr-1"></i> Bater Ponto
+        </a>
+    </div>
+   </div>
   
 </main>
