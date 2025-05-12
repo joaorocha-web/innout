@@ -12,13 +12,13 @@
         <p class="mb-0">Os batimentos efetuados hoje</p>
     </div>
     <div class="card-body">
-        <div class="d-flex m-5 justify-content-around">
-            <span>Entrada 1:---</span>
-            <span>Saída1:---</span>
+        <div class="d-flex m-4 justify-content-around">
+            <span class="record">Entrada 1:---</span>
+            <span class="record">Saída1:---</span>
         </div>
-        <div class="d-flex m-5 justify-content-around">
-            <span>Entrada2:---</span>
-            <span>Saída2:---</span>
+        <div class="d-flex m-4 justify-content-around">
+            <span class="record">Entrada2:---</span>
+            <span class="record">Saída2:---</span>
         </div>
     </div>
     <div class="card-footer d-flex justify-content-center">
