@@ -19,10 +19,10 @@ class Database {
         return $result;
     }
 
-    public static function executeSql($sql){
+    public static function executeSQL($sql){
         $conn = self::getConnection();
         if(!mysqli_query($conn, $sql)){
-            throw new Exception(mysqli_errno($conn));
+            throw new Exception(mysqli_error($conn));
         }
 
         $id = $conn->insert_id;
