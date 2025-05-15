@@ -1,13 +1,11 @@
 <?php
 // Controller temporário
-$i1 = DateInterval::createFromDateString('9 hours');
-$i2 = DateInterval::createFromDateString('6 hours');
+loadModel('WorkingHours');
 
-$r1 = sumIntervals($i1, $i2);
-$r2 = subtractIntervals($i1, $i2);
-
-print_r($r1);
-echo '<br>';
-print_r($r2);
-echo '<br>';
-print_r(getDateFromInterval($r1));
+$wh = WorkingHours::loadFromUserAndDate(1, date('Y-m-d'));
+echo "<br>";
+$workedInterval = $wh->getWorkedInterval()->format('%H:%I:%S');
+print_r($workedInterval);
+echo "<br>";
+$lunchInterval = $wh->getLunchInterval()->format('%H:%I:%S');
+print_r($lunchInterval);
