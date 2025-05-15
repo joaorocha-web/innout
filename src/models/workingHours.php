@@ -58,7 +58,7 @@ class WorkingHours extends Model{
          [, $t2, $t3, ] = $this->getTimes();
          $lunchInterval = new DateInterval('PT0S');
         if($t2) $lunchInterval = $t2->diff(new DateTime());
-        if($t3) $lunchInterval = $t3->diff($t2);
+        if($t3) $lunchInterval = $t2->diff($t3);
 
         return $lunchInterval;
     }
@@ -72,7 +72,7 @@ class WorkingHours extends Model{
          }elseif($t4){
             return $t4;
          }else{
-            $total = sumIntervals($workDay, $this->getLunchInterval);
+            $total = sumIntervals($workDay, $this->getLunchInterval());
             return $t1->add($total);
          }
     }
