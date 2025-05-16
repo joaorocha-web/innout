@@ -44,11 +44,17 @@ function getDateFromString($str){
 }
 
 function getFirstDayOfMonth($date){
-    $time = getDateAsDateTime($date)->getTimeStamp();
+    $time = getDateAsDateTime($date)->getTimestamp();
     return new DateTime(date('Y-m-1', $time));
 }
-
+;
 function getLastDayOfMonth($date){
-    $time = getDateAsDateTime($date)->getTimeStamp();
+    $time = getDateAsDateTime($date)->getTimestamp();
     return new DateTime(date('Y-m-t', $time));
+}
+
+function getSecondsFromDateIntervals($interval){
+    $d1 = new DateTimeImmutable();
+    $d2 = $d1->add($interval);
+    return $d2->getTimestamp() - $d1->getTimestamp();
 }
