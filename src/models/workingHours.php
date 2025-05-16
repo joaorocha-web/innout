@@ -18,6 +18,17 @@ class WorkingHours extends Model{
         return $registry;
     }
 
+    function getBalance(){
+        if(!$this-> time1 && !isPastWorkDay($this->work_date)) return '';
+        if($this->worked_time == DAILY_TIME) return '---------';
+
+        $balance = $this->worked_time - DAILY_TIME;
+        $balanceString = getTimeStringFromSeconds(abs($balance));
+        $collor = $this->worked_time >= DAILY_TIME ? "class= 'green-collor'" : "class= 'red-collor'";
+        $sign = $this->worked_time > DAILY_TIME ? '+' : '-';
+        return "<span $collor> $sign $balanceString </span>";
+    }
+
     public static function getMonthlyReport($userId, $date){
         $registries = [];
         $startDate = getFirstDayOfMonth($date)->format('Y-m-d');

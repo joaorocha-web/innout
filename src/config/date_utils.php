@@ -69,3 +69,8 @@ function getTimeStringFromSeconds($seconds){
     $s = $seconds - ($h * 3600) - ($m * 60);
     return sprintf('%2d:%2d:%2d', $h, $m, $s);
 }
+
+function formatDateWithLocale($date, $pattern){
+    $time = getDateAsDateTime($date)->getTimestamp();
+    return strftime($pattern, $time);
+}

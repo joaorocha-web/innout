@@ -213,6 +213,14 @@ main.content .content-title h2{
     margin: 0;
 }
 
+main.content .green-collor{
+    color: rgb(0, 131, 0);
+}
+
+main.content .red-collor{
+    color: rgb(216, 33, 0);
+}
+
 footer.footer{
     grid-area: footer;
     display: flex;
