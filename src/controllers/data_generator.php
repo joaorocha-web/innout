@@ -1,5 +1,5 @@
 <?php
-loadModel('WorkingHours');
+
 
 Database::executeSql("DELETE FROM working_hours");
 
