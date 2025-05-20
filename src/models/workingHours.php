@@ -50,7 +50,7 @@ class WorkingHours extends Model{
         $startDate = (new DateTime("{$yearAndMonth}-1"))->format('Y-m-d');
         $endDate = getLastDayOfMonth($yearAndMonth)->format('Y-m-d');
         $result = static::getResultSetFromSelect([
-            'raw' => "work_date BETWEEN '{$startDate}' AND '{$endDate}' "
+            'raw' => "work_date BETWEEN $startDate AND $endDate "
         ], "sum(worked_time) as sum" );
         return $result->fetch_assoc()['sum'];
     }
@@ -61,7 +61,7 @@ class WorkingHours extends Model{
         $endDate = getLastDayOfMonth($date)->format('Y-m-d');
 
         $result = static::getResultSetFromSelect([
-            'user_id' => $userId, 'raw' => "work_date between '{$startDate}' AND '{$endDate}'"
+            'user_id' => $userId, 'raw' => "work_date between $startDate AND $endDate"
         ]);
 
         if ($result){
