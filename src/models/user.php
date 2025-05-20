@@ -6,6 +6,6 @@ class User extends Model {
     ];
 
     public static function getActiveUserCount(){
-        return static::getCount(['$raw' => 'end_date IS NULL'])
+        return static::getCount(['$raw' => 'end_date IS NULL']);
     }
 }

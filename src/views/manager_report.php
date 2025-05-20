@@ -1,4 +1,10 @@
 <main class="content">
-<h1>Olá</h1>
+    <?php 
+        echo "Qtd de Usuários Ativos: {$activeUsersCount}";
+        echo "<br>";
+        echo "Horas trabalhadas no mês: {$hoursInMonth}";
+        echo "<br>";
+        print_r($absentUsers);
+    ?>
 
 </main>
