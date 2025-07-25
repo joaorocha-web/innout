@@ -12,21 +12,12 @@ class Database {
         return $conn;
     }
 
-    public static function getResultFromQuery($sql){
+    public static function getResultFromQuery($query){
         $conn = self::getConnection();
-        $result = $conn->query($sql);
+        $result = $conn->query($query);
+
         $conn->close();
         return $result;
     }
 
-    public static function executeSQL($sql){
-        $conn = self::getConnection();
-        if(!mysqli_query($conn, $sql)){
-            throw new Exception(mysqli_error($conn));
-        }
-
-        $id = $conn->insert_id;
-        $conn->close();
-        return $id;
-    }
 }
