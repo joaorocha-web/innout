@@ -1,15 +1,18 @@
 <?php 
 
-require_once (dirname(__FILE__, 2) . '/src/config/database.php');
+require_once (dirname(__FILE__, 2) . '/src/config/config.php');
+require_once (dirname(__FILE__, 2) . '/src/models/User.php');
 
-$sql = "SELECT * FROM users";
 
-$result = Database::getResultFromQuery($sql);
+$user = new User([
+    'name' => 'John Doe',
+    'password' => 'securepassword',
+    'email' => 'gp@.com']);
+    print_r($user->email);
+    print_r($user->email = 'alterado@.com'); 
 
-while ($row = $result->fetch_assoc()) {
-    print_r($row);
-    echo  "<br>";
-}
+echo ('<br>' . $user->getSelect(['name' => 'John Doe'], 'name, email'));
+echo "User model initialized successfully.";
 
 
 
