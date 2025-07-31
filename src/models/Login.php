@@ -1,33 +1,37 @@
 <?php
+loadModel('User');
 
-class Login extends Model {
+class Login extends Model{
+
     public function validate(){
         $errors = [];
 
-        if (!$this->email){ 
-            $errors['email'] = 'Por favor, informe seu e-mail.';
+        if(!$this->email){
+            $errors['email'] = 'E-mail é um campo obrigatório.';
         }
-
-        if (!$this->password){
-            $errors['password'] = 'A senha é obrigatória.';
+        
+        if(!$this->password){
+            $errors['password'] = 'Por favor, informe a senha';
         }
 
         if(count($errors) > 0){
-            throw new ValidationException($errors); 
+            throw new ValidationException($errors);
         }
     }
 
     public function checkLogin(){
         $this->validate();
         $user = User::getOne(['email' => $this->email]);
-        if ($user){
+        
+        if($user){
             if($user->end_date){
-                throw new AppException('Usuário desligado da empresa');   
+                throw new AppException('Usuário desligado da empresa.');
             }
-            if(password_verify($this->password, $user->password)){ 
+            if(password_verify($this->password, $user->password)){
                 return $user;
-            }
+            } 
+            
         }
-        throw new AppException('Usuário/Senha inválidos');
+        throw new AppException('Usuário ou senha inválidos!');
     }
 }
