@@ -1,8 +1,7 @@
 <?php
+session_start();
+requireValidSession();
+loadTemplateView('day_records');
 
-loadTemplateView('day_records')
 
 
-
-
-?>
