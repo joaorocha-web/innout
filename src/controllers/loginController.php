@@ -5,7 +5,7 @@ if (count($_POST) > 0){
     $login = new Login($_POST);
     try{
        $user = $login->checkLogin();
-       header("location: day_records.php");
+       header("location: dayRecordsController.php");
     } catch(AppException $e){
         $exception = $e;
     }
