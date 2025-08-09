@@ -14,13 +14,13 @@
                 </a>
             </li>
             <li class="nav-item">
-                <a href="monthlyReportController.php">
+                <a href="managerReportController.php">
                     <i class="icofont-chart-histogram mr-2"></i>
                     Relatório Gerencial
                 </a>
             </li>
             <li class="nav-item">
-                <a href="day_records.php">
+                <a href="userController.php">
                     <i class="icofont-users mr-2"></i>
                     Usuários
                 </a>
